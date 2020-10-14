@@ -49,7 +49,6 @@ p {
 
 .input:focus {
     border: 1px solid #2962FF;
-    color: #2962FF;
     outline: none;
 }
 
@@ -72,23 +71,42 @@ p {
     color: var(--red);
 }
 
-input[type='text'] {
+input {
     color: #333333;
     
 }
 
 .start-icon {
-    
-}
-
-.IconSearch {
-    position: absolute;
-    background-position: center center;
+    padding-left: 40px;
+    background-position: 1rem center;
     background-repeat: no-repeat;
     background-size: 1rem;
+}
+
+.end-icon {
+    background-position: 80% center;
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+}
+
+.search {
     background-image: url(./icons/search.svg);
-    top: 50%;
-    left: 50%;
+}
+
+.add_ic_call {
+    background-image: url(./icons/add_ic_call.svg);
+}
+
+.error_icon {
+    background-image: url(./icons/error_icon.svg);
+}
+
+.visibility {
+    background-image: url(./icons/visibility.svg);
+}
+
+.vpn_key {
+    background-image: url(./icons/vpn_key.svg);
 }
 
 .sm {
@@ -100,7 +118,7 @@ input[type='text'] {
 }
 
 .fullwidth {
-    width: calc(100% - 24px);
+    width: calc(100% - 50px);
 }
 
 

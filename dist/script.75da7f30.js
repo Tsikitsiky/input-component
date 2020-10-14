@@ -28285,41 +28285,7 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"icon.js":[function(require,module,exports) {
-// import React from 'react';
-// import IconAddIcCall from './icons/add_ic_call.svg';
-// import IconError from './icons/error.svg';
-// import IconVisibility from './icons/visibility.svg';
-// import IconVpnKey from './icons/vpn_key.svg';
-// import IconSearch from './icons/search.svg';
-// import './Icon.css';
-// const Icon = props => {
-// 	let icon;
-// 	const style = props.align === 'right' ? 'icon--right' : null;
-// 	switch (props.name) {
-// 		case 'add-cart':
-// 			icon = <img src={IconAddIcCall} className={style} />;
-// 			break;
-// 		case 'anchor':
-// 			icon = <img src={IconError} className={style} />;
-// 			break;
-// 		case 'check':
-// 			icon = <img src={IconVisibility} className={style} />;
-// 			break;
-// 		case 'download':
-// 			icon = <img src={IconVpnKey} className={style} />;
-// 			break;
-// 		case 'search':
-// 			icon = <img src={IconSearch} className={style} />;
-// 			break;
-// 		default:
-// 			icon = <span />;
-// 			break;
-// 	}
-// 	return icon;
-// };
-// export default Icon;
-},{}],"input.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"input.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28328,8 +28294,6 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
-
-var _icon = _interopRequireDefault(require("./icon"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28340,8 +28304,13 @@ function Input(props) {
     classes = "".concat(classes, " helper-text");
   }
 
-  if (props.starticon) {
-    classes = "".concat(classes, " start-icon ").concat(starticon);
+  if (props.startIcon) {
+    classes = "".concat(classes, " start-icon ").concat(props.startIcon);
+    console.log(classes);
+  }
+
+  if (props.endIcon) {
+    classes = "".concat(classes, " end-icon ").concat(props.endIcon);
   }
 
   if (props.size) {
@@ -28354,12 +28323,9 @@ function Input(props) {
     type: props.type,
     className: classes,
     disabled: props.disabled,
-    placeholder: props.placeholder,
-    error: props.error,
-    startIcon: props.starticon //endicon={props.endIcon ? <Icon name={props.endIcon} align="right" /> : ''}
+    placeholder: props.placeholder //endicon={props.endIcon ? <Icon name={props.endIcon} align="right" /> : ''}
     ,
-    value: props.value,
-    size: props.size
+    value: props.value
   }) : /*#__PURE__*/_react.default.createElement("textarea", {
     row: props.row,
     className: classes,
@@ -28371,7 +28337,7 @@ function Input(props) {
 
 var _default = Input;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./icon":"icon.js"}],"App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28423,13 +28389,13 @@ function App() {
     text: "<Input startIcon />",
     label: "Label",
     placeholder: "Placeholder",
-    startIcon: "IconSearch"
+    startIcon: "add_ic_call"
   }), /*#__PURE__*/_react.default.createElement(_input.default, {
     type: "text",
     text: "<Input endIcon/>",
     label: "Label",
     placeholder: "Placeholder",
-    endIcon: "IconSearch"
+    endIcon: "search"
   })), /*#__PURE__*/_react.default.createElement(_input.default, {
     type: "text",
     text: "<Input value= 'text' />",
@@ -28504,7 +28470,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51077" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62927" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -54,14 +54,14 @@ function App() {
                         text= {`<Input startIcon />`}
                         label='Label'
                         placeholder='Placeholder' 
-                        startIcon= 'IconSearch'
+                        startIcon= 'add_ic_call'
                     />
                     <Input 
                         type='text'
                         text= {`<Input endIcon/>`}
                         label='Label'
                         placeholder='Placeholder' 
-                        endIcon= 'IconSearch'
+                        endIcon= 'search'
                     />
                 </div>
                 <Input 

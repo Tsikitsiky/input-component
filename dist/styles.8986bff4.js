@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./icons\\search.svg":[["search.bab3328d.svg","icons/search.svg"],"icons/search.svg"],"_css_loader":"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./icons\\search.svg":[["search.bab3328d.svg","icons/search.svg"],"icons/search.svg"],"./icons\\add_ic_call.svg":[["add_ic_call.72a2f567.svg","icons/add_ic_call.svg"],"icons/add_ic_call.svg"],"./icons\\error_icon.svg":[["error_icon.1fd85370.svg","icons/error_icon.svg"],"icons/error_icon.svg"],"./icons\\visibility.svg":[["visibility.5d970ebc.svg","icons/visibility.svg"],"icons/visibility.svg"],"./icons\\vpn_key.svg":[["vpn_key.fc7ffe6c.svg","icons/vpn_key.svg"],"icons/vpn_key.svg"],"_css_loader":"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51077" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62927" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

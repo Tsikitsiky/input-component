@@ -1,17 +1,24 @@
 import React from 'react';
-import Icon from './icon'
+
 
 function Input(props) {
     let classes= props.error ? `input ${props.error}` : 'input';
     if(props.helperText) {
         classes = `${classes} helper-text`;
+        
     } 
-    if(props.starticon) {
-        classes = `${classes} start-icon ${starticon}`;
+    if(props.startIcon) {
+        classes = `${classes} start-icon ${props.startIcon}`;
+        console.log(classes)
+    }
+    if(props.endIcon) {
+        classes = `${classes} end-icon ${props.endIcon}`;
+        
     }
 
     if(props.size) {
-        classes = `${classes} ${props.size}`
+        classes = `${classes} ${props.size}`;
+        
     }
     return(
             <div className='fieldset'>
@@ -22,11 +29,8 @@ function Input(props) {
                 className={classes} 
                 disabled={props.disabled} 
                 placeholder={props.placeholder} 
-                error={props.error}
-                startIcon= {props.starticon}
                 //endicon={props.endIcon ? <Icon name={props.endIcon} align="right" /> : ''}
                 value={props.value}
-                size={props.size}
                  /> : 
                  <textarea 
                  row={props.row} 
