@@ -6807,7 +6807,7 @@ if ("development" !== "production") {
       }
 
       var eventName = 'on' + eventNameSuffix;
-      var isSupported = eventName in document;
+      var isSupported = (eventName in document);
 
       if (!isSupported) {
         var element = document.createElement('div');
@@ -28285,17 +28285,196 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"script.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"icon.js":[function(require,module,exports) {
+// import React from 'react';
+// import IconAddIcCall from './icons/add_ic_call.svg';
+// import IconError from './icons/error.svg';
+// import IconVisibility from './icons/visibility.svg';
+// import IconVpnKey from './icons/vpn_key.svg';
+// import IconSearch from './icons/search.svg';
+// import './Icon.css';
+// const Icon = props => {
+// 	let icon;
+// 	const style = props.align === 'right' ? 'icon--right' : null;
+// 	switch (props.name) {
+// 		case 'add-cart':
+// 			icon = <img src={IconAddIcCall} className={style} />;
+// 			break;
+// 		case 'anchor':
+// 			icon = <img src={IconError} className={style} />;
+// 			break;
+// 		case 'check':
+// 			icon = <img src={IconVisibility} className={style} />;
+// 			break;
+// 		case 'download':
+// 			icon = <img src={IconVpnKey} className={style} />;
+// 			break;
+// 		case 'search':
+// 			icon = <img src={IconSearch} className={style} />;
+// 			break;
+// 		default:
+// 			icon = <span />;
+// 			break;
+// 	}
+// 	return icon;
+// };
+// export default Icon;
+},{}],"input.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _icon = _interopRequireDefault(require("./icon"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Input(props) {
+  var classes = props.error ? "input ".concat(props.error) : 'input';
+
+  if (props.helperText) {
+    classes = "".concat(classes, " helper-text");
+  }
+
+  if (props.starticon) {
+    classes = "".concat(classes, " start-icon ").concat(starticon);
+  }
+
+  if (props.size) {
+    classes = "".concat(classes, " ").concat(props.size);
+  }
+
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "fieldset"
+  }, props.text, /*#__PURE__*/_react.default.createElement("input", {
+    type: props.type,
+    className: classes,
+    disabled: props.disabled,
+    placeholder: props.placeholder,
+    error: props.error,
+    startIcon: props.starticon //endicon={props.endIcon ? <Icon name={props.endIcon} align="right" /> : ''}
+    ,
+    value: props.value,
+    size: props.size,
+    row: props.row
+  }), props.starticon && /*#__PURE__*/_react.default.createElement("span", {
+    className: props.starticon
+  }), /*#__PURE__*/_react.default.createElement("label", null, props.label), props.helperText && /*#__PURE__*/_react.default.createElement("p", null, props.helperText));
+}
+
+var _default = Input;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","./icon":"icon.js"}],"App.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _input = _interopRequireDefault(require("./input"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function App() {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "container"
+  }, /*#__PURE__*/_react.default.createElement(_input.default, {
+    type: "text",
+    text: "<Input />",
+    label: "Label",
+    placeholder: "Placeholder"
+  }), /*#__PURE__*/_react.default.createElement(_input.default, {
+    type: "text",
+    text: "<Input error />",
+    label: "Label",
+    placeholder: "Placeholder",
+    error: "error"
+  }), /*#__PURE__*/_react.default.createElement(_input.default, {
+    type: "text",
+    text: "<Input disabled />",
+    label: "Label",
+    placeholder: "Placeholder",
+    disabled: true
+  }), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_input.default, {
+    type: "text",
+    text: "<Input helperText= 'Some interesting text' />",
+    label: "Label",
+    placeholder: "Placeholder",
+    helperText: "Some interesting text"
+  }), /*#__PURE__*/_react.default.createElement(_input.default, {
+    type: "text",
+    text: "<Input helperText= 'Some interesting text' error />",
+    label: "Label",
+    placeholder: "Placeholder",
+    helperText: "Some interesting text",
+    error: "error"
+  })), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_input.default, {
+    type: "text",
+    text: "<Input startIcon />",
+    label: "Label",
+    placeholder: "Placeholder",
+    startIcon: "IconSearch"
+  }), /*#__PURE__*/_react.default.createElement(_input.default, {
+    type: "text",
+    text: "<Input endIcon/>",
+    label: "Label",
+    placeholder: "Placeholder",
+    endIcon: "IconSearch"
+  })), /*#__PURE__*/_react.default.createElement(_input.default, {
+    type: "text",
+    text: "<Input value= 'text' />",
+    label: "Label",
+    placeholder: "Placeholder",
+    value: "Text"
+  }), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_input.default, {
+    type: "text",
+    text: "<Input size= 'sm' />",
+    label: "Label",
+    placeholder: "Placeholder",
+    size: "sm"
+  }), /*#__PURE__*/_react.default.createElement(_input.default, {
+    type: "text",
+    text: "<Input size= 'md' />",
+    label: "Label",
+    placeholder: "Placeholder",
+    size: "md"
+  })), /*#__PURE__*/_react.default.createElement(_input.default, {
+    type: "text",
+    text: "<Input fullwidth />",
+    label: "Label",
+    placeholder: "Placeholder",
+    size: "fullwidth"
+  }), /*#__PURE__*/_react.default.createElement(_input.default, {
+    type: "textarea",
+    text: "<Input multiline row='4' />",
+    label: "Label",
+    placeholder: "Placeholder",
+    row: "4"
+  }));
+}
+
+var _default = App;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","./input":"input.js"}],"script.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
+var _App = _interopRequireDefault(require("./App"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom.default.render(_react.default.createElement("h1", null, "Hello Onja"), document.getElementById('root'));
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+_reactDom.default.render( /*#__PURE__*/_react.default.createElement(_App.default, null), document.getElementById('root'));
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./App":"App.js"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -28323,7 +28502,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65015" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51077" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -28499,5 +28678,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","script.js"], null)
+},{}]},{},["../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","script.js"], null)
 //# sourceMappingURL=/script.75da7f30.js.map

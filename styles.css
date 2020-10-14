@@ -1,0 +1,106 @@
+:root {
+    --blue:  #2962FF;
+    --red:  #D32F2F;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    position: relative;
+}
+
+.fieldset{
+    display: flex;
+    flex-direction: column;
+}
+
+.container div {
+    display: flex;
+    column-gap: 50px;
+}
+
+label {
+    order: 1;
+}
+
+.input {
+    order: 2;
+}
+
+p {
+    order: 3;
+    margin: 0;
+    font-size: 12px;
+    line-height: 14.48px;
+    color: #828282;
+}
+
+.input {
+    width: 200px;
+    border-radius: 8px;
+    border: 1px solid #828282;
+    padding: 18px 12px;
+}
+
+.input:hover {
+    border: 1px solid #333333;
+}
+
+.input:focus {
+    border: 1px solid #2962FF;
+    color: #2962FF;
+    outline: none;
+}
+
+.input:focus ~ label {
+    color: #2962FF;
+    outline: none;
+}
+
+.error {
+    border: 1px solid var(--red);
+}
+
+.error:focus {
+    border: 1px solid var(--red);
+    outline: none;
+}
+
+.error ~ label,
+.error ~ p {
+    color: var(--red);
+}
+
+input[type='text'] {
+    color: #333333;
+    
+}
+
+.start-icon {
+    
+}
+
+.IconSearch {
+    position: absolute;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    background-image: url(./icons/search.svg);
+    top: 50%;
+    left: 50%;
+}
+
+.sm {
+    padding: 10px 12px;
+}
+
+.md {
+    padding: 18px 12px;
+}
+
+.fullwidth {
+    width: calc(100% - 24px);
+}
+
+

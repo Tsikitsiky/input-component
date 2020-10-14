@@ -1,0 +1,1 @@
+{"version":3,"sources":["Icon.css"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA;AACA","file":"script.75da7f30.css","sourceRoot":"..","sourcesContent":["img svg {\r\n\tmargin: 0 0.5rem 0 0;\r\n}\r\n\r\n.icon--right {\r\n\tmargin: 0 0 0 0.5rem;\r\n}"]}
