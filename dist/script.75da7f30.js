@@ -28350,7 +28350,7 @@ function Input(props) {
 
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "fieldset"
-  }, props.text, /*#__PURE__*/_react.default.createElement("input", {
+  }, props.text, props.type ? /*#__PURE__*/_react.default.createElement("input", {
     type: props.type,
     className: classes,
     disabled: props.disabled,
@@ -28359,8 +28359,11 @@ function Input(props) {
     startIcon: props.starticon //endicon={props.endIcon ? <Icon name={props.endIcon} align="right" /> : ''}
     ,
     value: props.value,
-    size: props.size,
-    row: props.row
+    size: props.size
+  }) : /*#__PURE__*/_react.default.createElement("textarea", {
+    row: props.row,
+    className: classes,
+    placeholder: props.placeholder
   }), props.starticon && /*#__PURE__*/_react.default.createElement("span", {
     className: props.starticon
   }), /*#__PURE__*/_react.default.createElement("label", null, props.label), props.helperText && /*#__PURE__*/_react.default.createElement("p", null, props.helperText));
@@ -28452,7 +28455,6 @@ function App() {
     placeholder: "Placeholder",
     size: "fullwidth"
   }), /*#__PURE__*/_react.default.createElement(_input.default, {
-    type: "textarea",
     text: "<Input multiline row='4' />",
     label: "Label",
     placeholder: "Placeholder",

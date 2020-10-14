@@ -94,8 +94,7 @@ function App() {
                     placeholder='Placeholder' 
                     size='fullwidth'
                 />
-                <Input 
-                    type='textarea'
+                <Input  
                     text= {`<Input multiline row='4' />`}
                     label='Label'
                     placeholder='Placeholder' 

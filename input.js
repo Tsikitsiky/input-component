@@ -16,7 +16,8 @@ function Input(props) {
     return(
             <div className='fieldset'>
                 {props.text}
-                <input 
+                {props.type ?
+                 <input 
                 type={props.type} 
                 className={classes} 
                 disabled={props.disabled} 
@@ -26,8 +27,13 @@ function Input(props) {
                 //endicon={props.endIcon ? <Icon name={props.endIcon} align="right" /> : ''}
                 value={props.value}
                 size={props.size}
-                row={props.row}
-                 />
+                 /> : 
+                 <textarea 
+                 row={props.row} 
+                 className={classes}
+                 placeholder={props.placeholder}
+                 ></textarea>
+                 }
                  {props.starticon && <span className={props.starticon}></span>}
                 <label>{props.label}</label>
                 {props.helperText && <p>{props.helperText}</p>}
