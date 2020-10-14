@@ -56,6 +56,10 @@ To use an input you have to specify the type of the input, the label and everyth
  
  User can choose between input and textarea.
 
+ User can choose colors and sizes.
+
+ User can choose to have a helper text.
+
 
 
 ## Acknowledgements
