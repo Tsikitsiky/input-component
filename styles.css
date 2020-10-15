@@ -68,6 +68,10 @@ p {
     outline: none;
 }
 
+.error:focus ~ label {
+    color: var(--red);
+}
+
 .error ~ label,
 .error ~ p {
     color: var(--red);
