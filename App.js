@@ -54,14 +54,14 @@ function App() {
                         text= {`<Input startIcon />`}
                         label='Label'
                         placeholder='Placeholder' 
-                        startIcon= 'add_ic_call'
+                        startIcon= 'visibility'
                     />
                     <Input 
                         type='text'
                         text= {`<Input endIcon/>`}
                         label='Label'
                         placeholder='Placeholder' 
-                        endIcon= 'search'
+                        endIcon= 'vpn_key'
                     />
                 </div>
                 <Input 

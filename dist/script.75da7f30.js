@@ -28389,13 +28389,13 @@ function App() {
     text: "<Input startIcon />",
     label: "Label",
     placeholder: "Placeholder",
-    startIcon: "add_ic_call"
+    startIcon: "visibility"
   }), /*#__PURE__*/_react.default.createElement(_input.default, {
     type: "text",
     text: "<Input endIcon/>",
     label: "Label",
     placeholder: "Placeholder",
-    endIcon: "search"
+    endIcon: "vpn_key"
   })), /*#__PURE__*/_react.default.createElement(_input.default, {
     type: "text",
     text: "<Input value= 'text' />",
